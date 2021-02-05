@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.PageTitle}}</title>
+</head>
+<body>
+    <h1>{{.PageTitle}}</h1>
+    <form action="/add" method="POST">
+        <input type="text" name="title">
+        <input type="submit" value="submit">
+    </form>
+    <ul>
+    {{ range .Posts }}
+        <li>{{ .Title}}</li>
+    {{ end }}
+    </ul>
+</body>
+</html>
